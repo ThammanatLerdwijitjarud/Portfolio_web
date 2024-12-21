@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav>
+                <div class="logo">
+                    <a href="#">Portfolio</a>
+                </div>
+                <ul class="menu">
+                    <li><a href="#aboutme">About Me</a></li>
+                    <li><a href="#activity">Activity</a></li>
+                    <li><a href="#certificate">Certficate</a></li>
+                    <li><a href="#footer-top">Contact</a></li>
+                </ul>
+    </nav>
+
+    <!-- add picture about com around student picture -->
+
+    <section id="aboutme">
+        <div class="container">
+            <div class="my-img">
+                <img src="profile2.jpg" alt="">
+            </div>
+            <div class="my-info">
+                <h4>Hello! I'm Maprao.</h4>
+                <h2>Web Developer</h2>
+                <p>
+                    A passionate and productive college student with strong analytical thinking and public communication skills.
+                    Quick to adapt to new environments and ready to face challenges, with a strong commitment to continuous learning and self-improvement.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- info-con -> contact me, address, education at the end of page -->
+    <main id="activity">
+        <div class="container">
+            <div class="blog-title">
+                <h3>My Activity</h3>
+            </div>
+            <div class="blog-con">
+                <div class="blog-item">
+                    <img src="malong.jpg" alt="">
+                    <h4>Malong Thailand Demo Day</h4>
+                    <h5>By Google Developer Student Clubs (GDSCs)</h5>
+                    <p>Activity created for students who are interested in technology to present idea for solve problem for our society focus on SDGs</p>
+                    <a href="https://www.facebook.com/GDSCMahidol" target="_blank">Visit GDSC Mahidol facebook</a>
+                </div>
+
+                <div class="blog-item">
+                    <img src="camp2.jpg" alt="">
+                    <h4>Click Camp 14 & 15</h4>
+                    <p>Click Camp is an academic camp organized by the Computer Engineering students at Mahidol University. It is an academic-focused camp that offers lessons on C programming, web development, and cybersecurity. I was responsible for the recruitment department.</p>
+                </div>
+
+                <div class="blog-item">
+                    <iframe src="062 minionsos.pdf" width="100%"></iframe>
+                    <h4>BIG's SEED Talent Camp by BIG C</h4>
+                    <p>Hackathon offer for university student interested in bussiness to share idea for develop retail business.</p>
+                    <a href="062 minionsos.pdf" target="_blank">See full PDF</a>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <main id="certificate">
+        <div class="container">
+            <div class="cer-title">
+                <h3>My Certficate</h3>
+            </div>
+            <div class="cer-con">
+                <div class="cer-item">
+                    <div class="slider">
+                        <!-- coursera -->
+                        <div class="slides">
+                          <img src="coursera1.jpg" alt="Image 1">
+                          <img src="python_coursera.jpg" alt="Image 2">
+                          <img src="course2.jpg" alt="Image 3">
+                        </div>
+                        <button class="arrow left">&larr;</button>
+                        <button class="arrow right">&rarr;</button>
+                    </div>
+                    
+                    <h4>Coursera Self Learning Programme</h4>
+                    <h5>I take a course on "Google IT Automation with Python".</h5>
+                    <p>"Google IT Automation with Python" is an online course offered by Google that focuses on teaching skills in using Python for IT automation or automating IT tasks. This course is part of the Google IT Support Professional Certificate, which helps learners gain knowledge in programming to improve efficiency in various IT tasks.</p>
+                    <a href="https://www.coursera.org/professional-certificates/google-it-automation" target="_blank">Visit Coursera</a>
+                </div>
+
+                <div class="cer-item">
+                    <!-- hackathon -->
+                    <img src="coursera1.jpg" alt="">
+                    <h4>Super Ai Engineer Hackathon x Mahidol University</h4>
+                    <h5> "AI for Human Activity Recognition in Wellness Management"</h5>
+                    <p>Super AI Engineer Season 4 x Mahidol University is a collaborative program designed to develop AI skills and innovation. The event fosters problem-solving, teamwork, and creativity in artificial intelligence. It's an excellent opportunity for students and professionals to advance in the AI field.
+                        From this activity, I met many talented individuals in the field of AI, and it was my first experience participating in a hackathon.
+                    </p>
+                </div>
+
+            </div>        
+        </div>
+    </main>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slider img');
+        const prevBtn = document.querySelector('.arrow.left');
+        const nextBtn = document.querySelector('.arrow.right');
+    
+        let currentIndex = 0;
+    
+        function updateSlider() {
+          const offset = -currentIndex * 300; // ความกว้างของรูปภาพ
+          slides.style.transform = `translateX(${offset}px)`;
+        }
+    
+        prevBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex - 1 + images.length) % images.length;
+          updateSlider();
+        });
+    
+        nextBtn.addEventListener('click', () => {
+          currentIndex = (currentIndex + 1) % images.length;
+          updateSlider();
+        });
+      </script>
+    
+
+    <!-- footer -->
+    <div id="footer-top">
+        <div class="container">
+            <div class="footer-top-con">
+                <div class="footer-top-item">
+                    <h4>Education</h4>
+                    <div class="footer-top-item-con">
+                        <div class="date">
+                            2023 <br>
+                            -<br>
+                            Present
+                        </div>
+                        <div class="info">
+                            <span class="info-title">Mahidol University</span> <br>
+                            <span class="info-desc">Faculty of Engineering, Computer Engineering <br>(GPAX : 3.88)</span>
+                        </div>
+                    </div>
+
+                    <div class="footer-top-item-con">
+                        <div class="date">
+                            2020 <br>
+                            -<br>
+                            2023
+                        </div>
+                        <div class="info">
+                            <span class="info-title">Princess Sirindhorn's College</span> <br>
+                            <span class="info-desc">Science Classrooms in University - Affiliated School Project <br>(GPAX : 3.95)</span>
+                        </div>
+                    </div>
+                </div>
+          
+                <div class="footer-top-item">
+                    <h4>Stay Connected</h4>
+                    <p><i class="fa fa-envelope" area-hidden="true"></i> Email : thammanat.ler@student.mahidol.edu</p>
+                    <p><i class="fa fa-phone" area-hidden="true"></i> Tel : 098-8445201</p>
+                    <p><i class="fa fa-facebook" area-hidden="true"></i> Facebook</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>@Copyright 2024. Thammanat Lerdwijitjarud</p>
+    </div>
+
+</body>
+</html>
